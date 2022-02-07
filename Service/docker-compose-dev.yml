@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  classification-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - LOGLEVEL=DEBUG
+      - MAX_WORKERS=1
+    ports:
+      - 8199:80
+    container_name: classifier_server
+    volumes:
+      - ./application:/app
+      - ../Models:/models
+    entrypoint: /start-reload.sh

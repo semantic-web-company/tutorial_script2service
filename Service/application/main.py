@@ -46,6 +46,6 @@ async def apply_model(req : Classification_Request,
     m = model_loader[model_name]
     r = m.classify(text)
 
-    return {"text_length": len(text),
+    return {"text_length": len(text)+200,
             "text_class": r,
             "text_author": author}
