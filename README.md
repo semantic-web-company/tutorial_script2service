@@ -19,3 +19,16 @@ text classification using a Support Vector Machine.
 
 Is to take this script, learn how to extract from it the models needed for 
 production, and build a web API for them
+
+
+### Steps:
+
+1. Take a look at the `Script` directory. There you will find the baseline 
+   script, which we will convert to a web API. The script itself, and the 
+   pipeline implemented therein is not so amazing.
+   
+2. Checkout the branch "service" of this repo, to see how this is later 
+   implemented into a web API based on the FastAPI library. 
+   
+The reason there are two branches is to allow for the service to be 
+constructed step by step during a workshop.

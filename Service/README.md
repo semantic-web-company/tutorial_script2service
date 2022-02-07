@@ -6,9 +6,11 @@
 
 2. install requirements  `pip install -r requirements.txt`
 
+2. install also `pip install "uvicorn[standard]`
+
 3. switch to `Service/appplication` directory
 
-4. create a `.env` file whith the `DATADIR=../../Data`
+4. create a `.env` file whith the `DATADIR=../../Models`
 
 5. Launch with  `uvicorn main:app --reload`
 
