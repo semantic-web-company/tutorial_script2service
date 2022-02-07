@@ -11,11 +11,15 @@ from sklearn.svm import SVC as SVMC
 from utils import remove_small_classes
 
 data_directory = "../Data/Genre_Classification_Dataset"
-training_file = join(data_directory, "train_data.txt")
+training_file = join(data_directory, "train_data_short.txt")
 output_model_file = "../Models/model_1.pkl"
 
 class_size_threshold = 1000
 max_classifier_iters = 200
+
+if "short" in training_file:
+    class_size_threshold = 150
+    output_model_file.replace(".pkl","_short.pkl")
 
 raw_data = []
 with open(training_file) as fin:
